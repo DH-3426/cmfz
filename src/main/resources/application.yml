@@ -1,0 +1,21 @@
+server:
+  port: 9090
+  context-path: /cmfz
+  jsp-servlet:
+    init-parameters:
+      development: true
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/cmfz
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.jdbc.Driver
+  aop:
+    proxy-target-class: true
+mybatis:
+  type-aliases-package: com.baizhi.dh.entity
+  mapper-locations: classpath:com/baizhi/dh/mapper/*.xml
+logging:
+  level:
+    com.baizhi.dh.dao: debug
